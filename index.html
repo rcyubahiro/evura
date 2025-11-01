@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-Vura | My Health Journey</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>E-Vura</h1>
+    <p>Your Smart Healthcare Connection</p>
+  </header>
+
+  <main>
+    <section class="auth-selection" id="auth-selection">
+      <h2>Welcome to E-Vura</h2>
+      <p>Select your role to continue</p>
+      <div class="buttons">
+        <button onclick="showForm('doctor')">I’m a Doctor</button>
+        <button onclick="showForm('patient')">I’m a Patient</button>
+      </div>
+    </section>
+
+    <section class="auth-forms hidden" id="auth-forms">
+      <h2 id="form-title">Login / Sign Up</h2>
+
+      <div class="form-toggle">
+        <button id="login-btn" class="active" onclick="toggleAuth('login')">Login</button>
+        <button id="signup-btn" onclick="toggleAuth('signup')">Sign Up</button>
+      </div>
+
+      <form id="login-form" class="auth-form">
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Password" required />
+        <button type="submit">Login</button>
+      </form>
+
+      <form id="signup-form" class="auth-form hidden">
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Password" required />
+        <button type="submit">Create Account</button>
+      </form>
+
+      <button class="back-btn" onclick="goBack()">← Back</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 E-Vura Project | Empowering Healthcare Through Technology</p>
+  </footer>
+
+  <script src="script.js "></script>
+</body>
+</html>
