@@ -1,0 +1,173 @@
+/* === General Styles === */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right, #90c8e8, #a3eaea);
+  color: #222;
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #006d77;
+  color: #fff;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.navbar .nav-links button {
+  margin-left: 15px;
+  padding: 7px 12px;
+  background-color: #83c5be;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Profile Container */
+.profile-container {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #ffffffcc;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.profile-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Profile Card */
+.profile-card {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.profile-photo {
+  flex: 0 0 120px;
+  text-align: center;
+}
+
+.profile-photo img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-photo button {
+  display: block;
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #006d77;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Profile Info */
+.profile-info {
+  flex: 1;
+}
+
+.info-item {
+  margin-bottom: 10px;
+}
+
+.info-item label {
+  font-weight: 600;
+  color: #333;
+  margin-right: 10px;
+}
+
+/* Profile Actions */
+.profile-actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.profile-actions button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #006d77;
+  color: #fff;
+  cursor: pointer;
+}
+
+.profile-actions button#save-changes {
+  background-color: #83c5be;
+}
+.profile-actions button#save-changes:hover {
+  background-color: #edf6f9;
+  color: #006d77;
+}  
+.profile-actions button#cancel {
+  background-color: #ff6b6b;
+}
+.profile-actions button#cancel:hover {
+  background-color: #ffe5e5;
+  color: #b30000;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .profile-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-photo, .profile-info {
+    flex: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  .profile-info {
+    margin-top: 15px;
+  }
+}
+.profile-actions {
+  flex-direction: column;
+}
+.profile-actions button {
+  width: 100%;
+}
+.profile-actions button#save-changes {
+  background-color: #83c5be;
+}
+.profile-actions button#save-changes:hover {
+  background-color: #edf6f9;
+  color: #006d77;
+}
+.profile-actions button#cancel {
+  background-color: #ff6b6b;
+}
+.profile-actions button#cancel:hover {
+  background-color: #ffe5e5;
+  color: #b30000;
+}
+/* === Footer === */
+footer {
+  background-color: #022f34;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  margin-top: auto;
+  padding-bottom: 270px;
+}

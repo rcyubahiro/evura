@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-Vura | Patient Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <!-- 🌐 Top Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <h1>E-Vura</h1>
+    </div>
+    <div class="nav-right">
+      <button id="profileBtn">Profile</button>
+      <button id="logoutBtn">Logout</button>
+    </div>
+  </nav>
+
+  <!-- 💻 Main Dashboard -->
+  <div class="dashboard-container">
+    <!-- 🧭 Patient Menu -->
+    <aside class="sidebar">
+      <h2>Patient Menu</h2>
+      <ul>
+        <li><a href="#">Find Doctor</a></li>
+        <li><a href="#">My Appointments</a></li>
+        <li><a href="#">Medical History</a></li>
+      </ul>
+    </aside>
+
+    <!-- 📋 Main Content Area -->
+    <main class="main-content">
+      <h2>Welcome, <span id="patientName"></span></h2>
+      <p class="intro-text">
+        Browse available slots, view your appointment history, and track your health records.
+      </p>
+
+      <!-- 🩺 Available Slots -->
+      <section class="card available-slots">
+        <h3>Available Doctor Slots</h3>
+        <ul id="availableSlotsList"></ul>
+      </section>
+
+      <!-- 📅 Booked Appointments -->
+      <section class="card appointments">
+        <h3>My Appointments</h3>
+        <ul id="myAppointments"></ul>
+      </section>
+
+      <!-- 🏥 Medical History (New Section) -->
+      <section class="card">
+        <h3>Medical History</h3>
+        <ul id="medicalHistoryList">
+          <li>
+            <strong>Dr. Smith</strong> — 15 Oct 2025  
+            <br><small>Diagnosis: Mild Hypertension</small><br>
+            <button class="view-details-btn" data-details="Diagnosis: Mild Hypertension\nPrescription: Lisinopril 10mg daily for 30 days\nNext Checkup: 15 Nov 2025">
+              View Details
+            </button>
+          </li>
+          <li>
+            <strong>Dr. Jane Wilson</strong> — 01 Sep 2025  
+            <br><small>Diagnosis: Allergic Rhinitis</small><br>
+            <button class="view-details-btn" data-details="Diagnosis: Allergic Rhinitis\nPrescription: Cetirizine 10mg at night for 14 days\nAdvice: Avoid dust exposure and cold drinks.">
+              View Details
+            </button>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <!-- 📘 Modal Popup for Details -->
+  <div id="detailsModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h3>Medical Record Details</h3>
+      <pre id="recordDetails"></pre>
+    </div>
+  </div>
+
+  <!-- 🔻 Footer -->
+  <footer>
+    © 2025 E-Vura | Empowering Health Through Technology<br>
+    Bumbogo, Kigali Innovation City, <br>Next to Azam, Kigali, Rwanda<br>
+    Phone: +250 784 650 21/2 <br>Email: info@e-vura.com
+  </footer>
+
+  <script src="patient_dashboard.js"></script>
+</body>
+</html>
