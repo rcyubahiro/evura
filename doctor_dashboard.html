@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-Vura | Doctor Dashboard</title>
+  <link rel="stylesheet" href="doctor_dashboard.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2 class="logo">E-Vura</h2>
+      <ul class="nav-menu">
+        <li class="active"><a href="#">Dashboard</a></li>
+        <li><a href="#">Consultations</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="header">
+        <h2>Doctor Dashboard</h2>
+      </header>
+
+      <!-- Overview Section -->
+      <section class="overview">
+        <div class="card">
+          <h3>Patients</h3>
+          <p id="patient-count">25</p>
+        </div>
+        <div class="card">
+          <h3>Scheduled Consultations</h3>
+          <p id="consultation-count">10</p>
+        </div>
+        <div class="card">
+          <h3>Pending Requests</h3>
+          <p id="pending-count">5</p>
+        </div>
+      </section>
+
+      <!-- Slot Management -->
+      <section class="slots-section">
+        <h3>Set Available Slots</h3>
+        <div class="slot-form">
+          <label for="slot-date">Select Date:</label>
+          <input type="date" id="slot-date" placeholder="Select a date" />
+          <label for="slot-time">Select Time:</label>
+          <input type="time" id="slot-time" placeholder="Select a time" />
+          <button id="add-slot">Add Slot</button>
+        </div>
+
+        <div class="slots-list">
+          <h4>Available Slots</h4>
+          <ul id="slots"></ul>
+        </div>
+      </section>
+    </main>
+  </div>
+  
+  <script src="doctor_dashboard.js"></script>
+  <!-- Footer -->
+ <footer class="footer">
+    <p>&copy; 2025 E-Vura. All Rights Reserved.</p>
+    <p>Contact: support@e-vura.com | +250 788 123 456</p>
+  </footer>
+
+</body>
+
+</html>

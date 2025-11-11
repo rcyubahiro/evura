@@ -1,0 +1,132 @@
+/* === General Layout === */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f3f8fb;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.dashboard-container {
+  display: flex;
+  flex: 1;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background-color: #006d77;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sidebar .logo {
+  font-size: 1.6rem;
+  margin-bottom: 30px;
+}
+
+.sidebar .nav-menu {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.sidebar .nav-menu li {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.sidebar .nav-menu a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  display: block;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.sidebar .nav-menu .active a,
+.sidebar .nav-menu a:hover {
+  background-color: #83c5be;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.header h2 {
+  color: #006d77;
+  margin-bottom: 20px;
+}
+
+/* Table */
+.consultation-list table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.consultation-list th,
+.consultation-list td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.consultation-list th {
+  background-color: #006d77;
+  color: #fff;
+}
+
+.consultation-list tr:hover {
+  background-color: #f1f9f8;
+}
+
+/* Action buttons */
+.action-btn {
+  padding: 6px 10px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.accept-btn { background-color: #2a9d8f; }
+.reject-btn { background-color: #e63946; }
+.reschedule-btn { background-color: #f4a261; }
+
+.action-btn:hover {
+  opacity: 0.85;
+}
+
+/* Footer */
+.footer {
+  background-color: #006d77;
+  color: #fff;
+  text-align: center;
+  padding: 15px 20px;
+  font-size: 0.9rem;
+  box-shadow: 0 -4px 6px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar { display: none; }
+  .main-content { padding: 20px; }
+  .consultation-list table, .consultation-list th, .consultation-list td {
+    font-size: 0.85rem;
+  }
+}

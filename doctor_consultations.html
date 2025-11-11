@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-Vura | Consultation Management</title>
+  <link rel="stylesheet" href="doctor_consultations.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2 class="logo">E-Vura</h2>
+      <ul class="nav-menu">
+        <li><a href="doctor_dashboard.html">Dashboard</a></li>
+        <li class="active"><a href="#">Consultations</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="header">
+        <h2>Consultation Requests</h2>
+      </header>
+
+      <section class="consultation-list">
+        <table>
+          <thead>
+            <tr>
+              <th>Patient Name</th>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Reason</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="requests">
+            <!-- Requests will be populated here via JS -->
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 E-Vura. All Rights Reserved.</p>
+    <p>Contact: support@e-vura.com | +250 788 123 456</p>
+  </footer>
+
+  <script src="doctor_consultations.js"></script>
+</body>
+</html>

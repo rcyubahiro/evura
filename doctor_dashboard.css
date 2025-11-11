@@ -1,0 +1,232 @@
+/* === General Layout === */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f3f8fb;
+  margin: 0;
+  display: flex;
+  height: 100vh;
+  color: #222;
+}
+
+.dashboard-container {
+  display: flex;
+  width: 100%;
+}
+
+/* === Sidebar === */
+.sidebar {
+  width: 220px;
+  background-color: #006d77;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sidebar .logo {
+  font-size: 1.6rem;
+  margin-bottom: 30px;
+}
+
+.sidebar .nav-menu {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.sidebar .nav-menu li {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.sidebar .nav-menu a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  display: block;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.sidebar .nav-menu .active a,
+.sidebar .nav-menu a:hover {
+  background-color: #83c5be;
+}
+
+/* === Main Content === */
+.main-content {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.header h2 {
+  color: #006d77;
+  margin-bottom: 20px;
+}
+
+/* === Overview Cards === */
+.overview {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  flex: 1;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card h3 {
+  color: #006d77;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* === Slot Management === */
+.slots-section {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.slots-section h3 {
+  color: #006d77;
+  margin-bottom: 15px;
+}
+
+.slot-form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.slot-form input,
+.slot-form button {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.slot-form button {
+  background-color: #006d77;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s;
+}
+
+.slot-form button:hover {
+  background-color: #00575e;
+}
+
+/* === Slot List === */
+.slots-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.slots-list li {
+  background-color: #e9f5f4;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slots-list button {
+  background-color: #e63946;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px 8px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+/* Make body full height and use flex */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f3f8fb;
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* vertical layout */
+  min-height: 100vh;      /* full viewport height */
+}
+
+/* Dashboard container grows to fill space */
+.dashboard-container {
+  display: flex;
+  flex: 1; /* this makes the main content take available space */
+  width: 100%;
+}
+
+/* Footer stays at bottom */
+.footer {
+  background-color: #006d77;
+  color: #fff;
+  text-align: center;
+  padding: 15px 20px;
+  font-size: 0.9rem;
+}
+/* === Footer with Shadow and Hover Effects === */
+.footer {
+  background-color: #006d77;
+  color: #fff;
+  text-align: center;
+  padding: 15px 20px;
+  font-size: 0.9rem;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* subtle shadow at top */
+  transition: background-color 0.3s ease;
+  flex-shrink: 0; /* ensures footer stays visible */
+}
+
+.footer p {
+  margin: 5px 0;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect on contact text */
+.footer p:hover {
+  color: #83c5be;
+  cursor: default;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .main-content {
+    padding: 20px;
+  }
+
+  .overview {
+    flex-direction: column;
+  }
+
+  .slot-form {
+    flex-direction: column;
+  }
+}
